@@ -174,7 +174,7 @@ a:hover {
     max-width: 210px;
     aspect-ratio: 4 / 5;
     object-fit: cover;
-    border-radius: 2px;
+    border-radius: 50%;
     filter: grayscale(15%);
 }
 
