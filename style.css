@@ -11,154 +11,213 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #ffffff;
-  color: #202b3b;
+  color: #263448;
   line-height: 1.7;
 }
 
+/* Navigation */
+
 .navbar {
+  max-width: 1100px;
+  margin: auto;
+  padding: 28px 35px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px 9%;
-  border-bottom: 1px solid #e8ebef;
+  border-bottom: 1px solid #e9edf1;
 }
 
 .logo {
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 2px;
-  color: #172b46;
+  color: #1b2d45;
   text-decoration: none;
 }
 
-.nav-links {
+.navbar nav {
   display: flex;
-  gap: 28px;
+  gap: 30px;
 }
 
-.nav-links a {
+.navbar nav a {
+  font-size: 13px;
+  color: #657184;
   text-decoration: none;
-  color: #5d6878;
-  font-size: 14px;
 }
 
-.nav-links a:hover,
-.text-link:hover {
+.navbar nav a:hover {
   color: #172b46;
 }
 
-.hero {
-  background: #172b46;
-  color: white;
-  padding: 130px 12%;
+/* Profile card */
+
+.profile-card {
+  max-width: 850px;
+  margin: 85px auto 100px;
+  padding: 0 35px;
+}
+
+.profile-top {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  margin-bottom: 38px;
+}
+
+.profile-photo {
+  width: 145px;
+  height: 145px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 35%;
+  border: 4px solid #f0f2f5;
 }
 
 .eyebrow {
-  font-size: 12px;
-  letter-spacing: 2px;
-  font-weight: 700;
-  color: #8796a9;
-  margin-bottom: 20px;
-}
-
-.hero .eyebrow {
-  color: #bdc9d8;
-}
-
-.hero h1 {
-  font-size: clamp(38px, 6vw, 68px);
-  line-height: 1.15;
-  max-width: 850px;
-  margin-bottom: 25px;
-}
-
-.intro {
-  color: #d1d9e3;
-  max-width: 540px;
-  margin-bottom: 35px;
-}
-
-.button {
-  display: inline-block;
-  padding: 13px 23px;
-  background: white;
-  color: #172b46;
-  text-decoration: none;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 600;
+  letter-spacing: 2px;
+  color: #8793a2;
+  margin-bottom: 10px;
 }
 
-.button:hover {
-  background: #e8edf3;
+.profile-intro h1 {
+  font-size: 38px;
+  font-weight: 600;
+  letter-spacing: -1px;
+  color: #192b43;
+  line-height: 1.3;
 }
+
+/* About */
+
+.about-content {
+  padding-top: 27px;
+  border-top: 1px solid #e8ebef;
+}
+
+.about-content h2 {
+  font-size: 21px;
+  font-weight: 600;
+  color: #192b43;
+  margin-bottom: 12px;
+}
+
+.about-content p {
+  max-width: 690px;
+  font-size: 15px;
+  line-height: 1.9;
+  color: #647184;
+}
+
+.profile-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  padding-top: 17px;
+  border-top: 1px solid #e8ebef;
+  font-size: 12px;
+  color: #8993a0;
+}
+
+/* Other sections */
 
 .section {
-  padding: 90px 12%;
-  max-width: 1200px;
+  max-width: 850px;
   margin: auto;
+  padding: 55px 35px;
+  border-top: 1px solid #e8ebef;
 }
 
 .section h2 {
-  font-size: 34px;
+  font-size: 27px;
+  font-weight: 600;
+  color: #192b43;
   margin-bottom: 25px;
-  color: #172b46;
-}
-
-.section > p:not(.eyebrow) {
-  max-width: 700px;
-  color: #657184;
-  margin-bottom: 16px;
 }
 
 .entry {
-  padding: 25px 0;
-  border-bottom: 1px solid #e8ebef;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #edf0f3;
 }
 
 .entry h3 {
-  color: #172b46;
-  font-size: 19px;
-}
-
-.entry p {
-  color: #46576c;
+  font-size: 16px;
+  color: #263448;
   font-weight: 600;
 }
 
-.entry span {
-  color: #7a8492;
+.entry p,
+.section-description {
+  color: #718094;
   font-size: 14px;
 }
 
-.text-link {
-  color: #172b46;
-  font-weight: 600;
+.entry > span {
+  color: #929ba7;
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 footer {
-  padding: 30px;
+  margin-top: 50px;
+  padding: 25px;
   text-align: center;
   border-top: 1px solid #e8ebef;
-  color: #7a8492;
-  font-size: 13px;
+  color: #929ba7;
+  font-size: 12px;
 }
 
-@media (max-width: 650px) {
+/* Mobile layout */
+
+@media (max-width: 600px) {
   .navbar {
+    padding: 22px;
     flex-direction: column;
     gap: 15px;
   }
 
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+  .navbar nav {
+    gap: 17px;
   }
 
-  .hero {
-    padding: 90px 8%;
+  .navbar nav a {
+    font-size: 12px;
+  }
+
+  .profile-card {
+    margin: 55px auto 70px;
+    padding: 0 25px;
+  }
+
+  .profile-top {
+    gap: 20px;
+  }
+
+  .profile-photo {
+    width: 105px;
+    height: 105px;
+  }
+
+  .profile-intro h1 {
+    font-size: 28px;
+  }
+
+  .profile-footer {
+    gap: 10px;
+    flex-wrap: wrap;
   }
 
   .section {
-    padding: 65px 8%;
+    padding: 45px 25px;
+  }
+
+  .entry {
+    flex-direction: column;
+    gap: 5px;
   }
 }
