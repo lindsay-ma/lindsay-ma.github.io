@@ -46,8 +46,8 @@ a {
 ========================================= */
 
 .site-header {
-    max-width: 1200px;
-    margin: auto;
+    width: 100%;
+    margin: 0;
     padding: 25px 55px;
 
     display: flex;
