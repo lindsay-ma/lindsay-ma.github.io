@@ -849,20 +849,20 @@ footer span {
 
 }
 
-
 /* ECO SENTIER PHOTOGRAPHS */
 
 .eco-image-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
     gap: 20px;
     width: 100%;
-    margin-top: 35px;
+    max-width: 850px;
+    margin: 35px auto 0;
 }
 
 .eco-image-slot {
     width: 100%;
-    aspect-ratio: 4 / 3;
+    height: 260px;
     overflow: hidden;
     background: #dedfdd;
     border: 1px solid var(--line);
@@ -870,13 +870,17 @@ footer span {
 
 .eco-image-slot img {
     display: block;
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     object-fit: cover;
 }
 
 @media (max-width: 450px) {
     .eco-image-grid {
         gap: 10px;
+    }
+
+    .eco-image-slot {
+        height: 150px;
     }
 }
