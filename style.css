@@ -1,11 +1,6 @@
-/* =================================
-   LINDSAY MA — PERSONAL PORTFOLIO
-   Institutional / Finance-Inspired
-================================= */
-
-* {
-    box-sizing: border-box;
-}
+/* =========================================
+   COLOUR PALETTE
+========================================= */
 
 :root {
     --charcoal: #202326;
@@ -19,6 +14,15 @@
     --line: #d0d2d0;
 }
 
+
+/* =========================================
+   GENERAL STYLING
+========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -29,19 +33,28 @@ body {
     color: var(--text);
     font-family: Arial, Helvetica, sans-serif;
     line-height: 1.75;
-    -webkit-font-smoothing: antialiased;
 }
 
-/* HEADER */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================
+   HEADER AND NAVIGATION
+========================================= */
 
 .site-header {
     max-width: 1200px;
     margin: auto;
     padding: 25px 55px;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
+
     background: var(--charcoal);
     color: var(--white);
 }
@@ -69,14 +82,18 @@ nav a {
     font-size: 10px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    transition: color .2s ease;
+    transition: color 0.2s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
     color: #c9b48e;
 }
 
-/* MAIN LAYOUT */
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
 
 main {
     max-width: 1050px;
@@ -98,19 +115,16 @@ main {
     margin-bottom: 18px;
 }
 
-/* TYPOGRAPHY */
+
+/* =========================================
+   HEADINGS
+========================================= */
 
 h1,
 h2,
 h3,
 h4 {
     color: var(--charcoal);
-}
-
-h1,
-h2,
-h3,
-h4 {
     font-family: Georgia, "Times New Roman", serif;
 }
 
@@ -127,11 +141,7 @@ h2 {
     font-weight: 400;
     line-height: 1.25;
     margin: 0 0 45px;
-    letter-spacing: -.5px;
-}
-
-h3 {
-    font-weight: 400;
+    letter-spacing: -0.5px;
 }
 
 h4 {
@@ -141,20 +151,10 @@ h4 {
     margin: 0 0 9px;
 }
 
-p {
-    margin-top: 0;
-}
 
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--gold);
-}
-
-/* ABOUT */
+/* =========================================
+   HOMEPAGE INTRODUCTION
+========================================= */
 
 #about {
     padding-top: 115px;
@@ -172,7 +172,7 @@ a:hover {
     display: block;
     width: 100%;
     max-width: 210px;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 1;
     object-fit: cover;
     border-radius: 50%;
     filter: grayscale(15%);
@@ -185,26 +185,107 @@ a:hover {
     line-height: 1.9;
 }
 
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
 .social-links {
     display: flex;
     gap: 25px;
     margin-top: 28px;
+
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-.social-links p {
-    margin: 0;
-}
-
 .social-links a {
     padding-bottom: 5px;
     border-bottom: 1px solid var(--gold);
+    transition: color 0.2s ease;
 }
 
-/* SUBHEADINGS */
+.social-links a:hover {
+    color: var(--gold);
+}
+
+
+/* =========================================
+   HOMEPAGE EXPLORE SECTION
+========================================= */
+
+.explore-section {
+    padding-top: 75px;
+    padding-bottom: 95px;
+}
+
+.explore-section h2 {
+    margin-bottom: 35px;
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.explore-card {
+    display: block;
+    padding: 32px;
+
+    background: var(--off-white);
+    border: 1px solid #dedfdd;
+
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.explore-card:hover {
+    border-color: var(--gold);
+    transform: translateY(-3px);
+}
+
+.card-number {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.explore-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 18px 0 10px;
+}
+
+.explore-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.explore-link {
+    display: inline-block;
+    margin-top: 25px;
+
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.explore-link span {
+    margin-left: 5px;
+}
+
+
+/* =========================================
+   EXPERIENCE AND OTHER PAGE ELEMENTS
+========================================= */
 
 .subheading {
     font-family: Arial, Helvetica, sans-serif;
@@ -215,8 +296,6 @@ a:hover {
     color: var(--muted);
     margin: 55px 0 18px;
 }
-
-/* EXPERIENCE ENTRIES */
 
 .entry {
     display: grid;
@@ -251,7 +330,10 @@ a:hover {
     color: var(--gold);
 }
 
-/* AWARDS AND PROGRAMS */
+
+/* =========================================
+   SIMPLE LISTS
+========================================= */
 
 .simple-list > div {
     display: grid;
@@ -265,7 +347,7 @@ a:hover {
     color: var(--gold);
     font-family: Arial, Helvetica, sans-serif;
     font-size: 11px;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
     padding-top: 4px;
 }
 
@@ -275,7 +357,10 @@ a:hover {
     color: #414649;
 }
 
-/* WRITING */
+
+/* =========================================
+   WRITING AND PROJECT CARDS
+========================================= */
 
 .writing-grid {
     display: grid;
@@ -287,8 +372,10 @@ a:hover {
     padding: 32px;
     background: var(--off-white);
     border: 1px solid #dedfdd;
-    transition: border-color .25s ease,
-                transform .25s ease;
+
+    transition:
+        border-color 0.25s ease,
+        transform 0.25s ease;
 }
 
 .writing-card:hover {
@@ -323,13 +410,17 @@ a:hover {
     margin-top: 15px;
     padding-bottom: 4px;
     border-bottom: 1px solid var(--gold);
+
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
 
-/* PHOTOGRAPHY */
+
+/* =========================================
+   PHOTOGRAPHY
+========================================= */
 
 .photo-grid {
     display: grid;
@@ -351,13 +442,18 @@ a:hover {
     line-height: 1.8;
 }
 
-/* FOOTER */
+
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
     max-width: 1200px;
     margin: auto;
+
     background: var(--charcoal);
     color: #c6c8c7;
+
     text-align: center;
     font-size: 10px;
     letter-spacing: 2px;
@@ -368,7 +464,14 @@ footer p {
     margin: 0;
 }
 
-/* TABLET AND MOBILE */
+footer span {
+    color: var(--gold);
+}
+
+
+/* =========================================
+   TABLET AND MOBILE
+========================================= */
 
 @media (max-width: 750px) {
 
@@ -431,7 +534,16 @@ footer p {
     .photo-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
 }
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
 
 @media (max-width: 450px) {
 
@@ -454,4 +566,5 @@ footer p {
     .writing-card {
         padding: 25px;
     }
+
 }
