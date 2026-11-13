@@ -49,12 +49,10 @@ a {
     width: 100%;
     margin: 0;
     padding: 25px 55px;
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 30px;
-
     background: var(--charcoal);
     color: var(--white);
 }
@@ -91,129 +89,6 @@ nav > a.active {
     color: #c9b48e;
 }
 
-
-
-/* =========================================
-   RESUME ACCORDION
-========================================= */
-
-.resume-accordion {
-    padding-top: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
-}
-
-.resume-item {
-    background: var(--off-white);
-    border: 1px solid var(--line);
-    border-radius: 3px;
-    overflow: hidden;
-    transition: border-color 0.2s ease;
-}
-
-.resume-item:hover {
-    border-color: var(--gold);
-}
-
-.resume-item summary {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-    padding: 32px 30px;
-    cursor: pointer;
-    list-style: none;
-}
-
-.resume-item summary::-webkit-details-marker {
-    display: none;
-}
-
-.resume-number {
-    color: var(--gold);
-    font-size: 12px;
-    letter-spacing: 1.5px;
-}
-
-.resume-heading {
-    flex: 1;
-    font-family: Georgia, serif;
-    font-size: 25px;
-    color: var(--text);
-}
-
-.resume-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 34px;
-    height: 34px;
-    border: 1px solid var(--line);
-    border-radius: 50%;
-    color: var(--gold);
-    font-size: 22px;
-    font-weight: 300;
-    transition: transform 0.25s ease, background 0.2s ease;
-}
-
-.resume-item[open] .resume-toggle {
-    transform: rotate(45deg);
-    background: var(--white);
-}
-
-.resume-content {
-    padding: 0 30px 25px;
-}
-
-.resume-content .entry:first-child {
-    border-top: 1px solid var(--line);
-}
-
-/* =========================================
-   RESUME MOBILE ADJUSTMENTS
-========================================= */
-
-@media (max-width: 750px) {
-
-    .resume-accordion {
-        gap: 14px;
-    }
-
-    .resume-item summary {
-        padding: 25px 20px;
-        gap: 15px;
-    }
-
-    .resume-heading {
-        font-size: 21px;
-    }
-
-    .resume-content {
-        padding: 0 20px 20px;
-    }
-
-    .resume-content .entry {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-}
-
-@media (max-width: 450px) {
-
-    .resume-item summary {
-        padding: 22px 16px;
-    }
-
-    .resume-heading {
-        font-size: 18px;
-    }
-
-    .resume-content {
-        padding: 0 16px 18px;
-    }
-
-}
 
 /* =========================================
    MAIN CONTENT
@@ -318,7 +193,6 @@ h4 {
     display: flex;
     gap: 25px;
     margin-top: 28px;
-
     font-size: 11px;
     font-weight: 600;
     letter-spacing: 1px;
@@ -358,13 +232,9 @@ h4 {
 .explore-card {
     display: block;
     padding: 32px;
-
     background: var(--off-white);
     border: 1px solid #dedfdd;
-
-    transition:
-        border-color 0.25s ease,
-        transform 0.25s ease;
+    transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
 .explore-card:hover {
@@ -395,7 +265,6 @@ h4 {
 .explore-link {
     display: inline-block;
     margin-top: 25px;
-
     color: var(--gold);
     font-size: 10px;
     font-weight: 700;
@@ -496,10 +365,7 @@ h4 {
     padding: 32px;
     background: var(--off-white);
     border: 1px solid #dedfdd;
-
-    transition:
-        border-color 0.25s ease,
-        transform 0.25s ease;
+    transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
 .writing-card:hover {
@@ -534,7 +400,6 @@ h4 {
     margin-top: 15px;
     padding-bottom: 4px;
     border-bottom: 1px solid var(--gold);
-
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1px;
@@ -568,137 +433,33 @@ h4 {
 
 
 /* =========================================
-   FOOTER
-========================================= */
-
-footer {
-    width: 100%;
-    margin: 0;
-
-    background: var(--charcoal);
-    color: #c6c8c7;
-
-    text-align: center;
-    font-size: 10px;
-    letter-spacing: 2px;
-    padding: 32px 15px;
-}
-
-footer p {
-    margin: 0;
-}
-
-footer span {
-    color: var(--gold);
-}
-
-
-/* =========================================
-   TABLET AND MOBILE
-========================================= */
-
-@media (max-width: 750px) {
-
-    .site-header {
-        padding: 24px 25px;
-        align-items: flex-start;
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    nav {
-        gap: 14px 20px;
-    }
-
-    .nav-dropdown {
-        display: inline-block;
-    }
-
-    .dropdown-menu {
-        left: 0;
-        min-width: 200px;
-    }
-
-    main {
-        padding: 0 25px;
-    }
-
-    .section {
-        padding: 65px 0;
-    }
-
-    #about {
-        padding-top: 75px;
-        padding-bottom: 75px;
-    }
-
-    .profile-layout {
-        grid-template-columns: 130px 1fr;
-        gap: 28px;
-        align-items: start;
-    }
-
-    .profile-photo {
-        max-width: 130px;
-    }
-
-    h1 {
-        font-size: 39px;
-    }
-
-    h2 {
-        font-size: 32px;
-    }
-
-    .entry {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .simple-list > div {
-        grid-template-columns: 100px 1fr;
-        gap: 15px;
-    }
-
-    .writing-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .explore-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
-/* =========================================
    RESUME ACCORDION
 ========================================= */
 
 .resume-accordion {
     padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 .resume-item {
-    border-top: 1px solid var(--line);
+    background: var(--off-white);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    overflow: hidden;
+    transition: border-color 0.2s ease;
 }
 
-.resume-item:last-child {
-    border-bottom: 1px solid var(--line);
+.resume-item:hover {
+    border-color: var(--gold);
 }
 
 .resume-item summary {
     display: flex;
     align-items: center;
     gap: 25px;
-    padding: 28px 5px;
+    padding: 32px 30px;
     cursor: pointer;
     list-style: none;
 }
@@ -709,30 +470,38 @@ footer span {
 
 .resume-number {
     color: var(--gold);
-    font-size: 11px;
-    letter-spacing: 1px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
 }
 
 .resume-heading {
     flex: 1;
     font-family: Georgia, serif;
-    font-size: 23px;
+    font-size: 25px;
     color: var(--text);
 }
 
 .resume-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
     color: var(--gold);
-    font-size: 25px;
+    font-size: 22px;
     font-weight: 300;
-    transition: transform 0.2s ease;
+    transition: transform 0.25s ease, background 0.2s ease;
 }
 
 .resume-item[open] .resume-toggle {
     transform: rotate(45deg);
+    background: var(--white);
 }
 
 .resume-content {
-    padding: 0 5px 25px;
+    padding: 0 30px 25px;
 }
 
 .resume-content .entry:first-child {
@@ -808,51 +577,12 @@ footer span {
 
 
 /* =========================================
-   MOBILE ADJUSTMENTS
+   ECO SENTIER PHOTOGRAPHS
 ========================================= */
 
-@media (max-width: 750px) {
-
-    .resume-item summary {
-        gap: 15px;
-    }
-
-    .resume-heading {
-        font-size: 19px;
-    }
-
-    .resume-content .entry {
-        grid-template-columns: 1fr;
-        gap: 12px;
-    }
-
-    .photo-feature {
-        padding: 25px;
-    }
-
-}
-
-@media (max-width: 450px) {
-
-    .resume-item summary {
-        padding: 22px 2px;
-    }
-
-    .resume-heading {
-        font-size: 17px;
-    }
-
-    .project-stat {
-        font-size: 25px;
-    }
-
-}
-
-/* ECO SENTIER PHOTOGRAPHS */
-
 .eco-image-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
     width: 100%;
     max-width: 850px;
@@ -869,12 +599,173 @@ footer span {
 
 .eco-image-slot img {
     display: block;
-    width: 100% !important;
-    height: 100% !important;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+    width: 100%;
+    margin: 0;
+    background: var(--charcoal);
+    color: #c6c8c7;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 2px;
+    padding: 32px 15px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer span {
+    color: var(--gold);
+}
+
+
+/* =========================================
+   TABLET AND MOBILE
+========================================= */
+
+@media (max-width: 750px) {
+
+    .site-header {
+        padding: 24px 25px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 14px 20px;
+    }
+
+    main {
+        padding: 0 25px;
+    }
+
+    .section {
+        padding: 65px 0;
+    }
+
+    #about {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+    .profile-layout {
+        grid-template-columns: 130px 1fr;
+        gap: 28px;
+        align-items: start;
+    }
+
+    .profile-photo {
+        max-width: 130px;
+    }
+
+    h1 {
+        font-size: 39px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .entry {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .simple-list > div {
+        grid-template-columns: 100px 1fr;
+        gap: 15px;
+    }
+
+    .writing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .explore-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-accordion {
+        gap: 14px;
+    }
+
+    .resume-item summary {
+        padding: 25px 20px;
+        gap: 15px;
+    }
+
+    .resume-heading {
+        font-size: 21px;
+    }
+
+    .resume-content {
+        padding: 0 20px 20px;
+    }
+
+    .resume-content .entry {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .photo-feature {
+        padding: 25px;
+    }
+}
+
+
+/* =========================================
+   SMALL PHONES
+========================================= */
+
 @media (max-width: 450px) {
+
+    .site-header {
+        padding: 22px 20px;
+    }
+
+    main {
+        padding: 0 20px;
+    }
+
+    .profile-layout {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .profile-photo {
+        max-width: 150px;
+    }
+
+    .resume-item summary {
+        padding: 22px 16px;
+    }
+
+    .resume-heading {
+        font-size: 18px;
+    }
+
+    .resume-content {
+        padding: 0 16px 18px;
+    }
+
+    .project-stat {
+        font-size: 25px;
+    }
+
     .eco-image-grid {
         gap: 10px;
     }
