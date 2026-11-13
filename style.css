@@ -628,3 +628,172 @@ footer span {
 ========================================= */
 
 @media (
+/* =========================================
+   RESUME ACCORDION
+========================================= */
+
+.resume-accordion {
+    padding-top: 20px;
+}
+
+.resume-item {
+    border-top: 1px solid var(--line);
+}
+
+.resume-item:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.resume-item summary {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding: 28px 5px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.resume-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.resume-number {
+    color: var(--gold);
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.resume-heading {
+    flex: 1;
+    font-family: Georgia, serif;
+    font-size: 23px;
+    color: var(--text);
+}
+
+.resume-toggle {
+    color: var(--gold);
+    font-size: 25px;
+    font-weight: 300;
+    transition: transform 0.2s ease;
+}
+
+.resume-item[open] .resume-toggle {
+    transform: rotate(45deg);
+}
+
+.resume-content {
+    padding: 0 5px 25px;
+}
+
+.resume-content .entry:first-child {
+    border-top: 1px solid var(--line);
+}
+
+
+/* =========================================
+   PROJECT HIGHLIGHTS
+========================================= */
+
+.project-highlight {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px 15px;
+    margin-top: 35px;
+    padding: 25px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.project-stat {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: var(--gold);
+}
+
+.project-stat-label {
+    color: var(--muted);
+    font-size: 12px;
+    margin-right: 25px;
+}
+
+
+/* =========================================
+   MEDIA PAGE
+========================================= */
+
+.media-more {
+    margin-top: 30px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.media-more a {
+    color: var(--gold);
+    text-decoration: none;
+}
+
+.media-more a:hover {
+    text-decoration: underline;
+}
+
+.photo-feature {
+    margin-top: 35px;
+    padding: 35px;
+    background: var(--off-white);
+    border: 1px solid var(--line);
+}
+
+.photo-feature h3 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: normal;
+    margin: 10px 0 15px;
+}
+
+.photo-feature p:last-child {
+    max-width: 650px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   MOBILE ADJUSTMENTS
+========================================= */
+
+@media (max-width: 750px) {
+
+    .resume-item summary {
+        gap: 15px;
+    }
+
+    .resume-heading {
+        font-size: 19px;
+    }
+
+    .resume-content .entry {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .photo-feature {
+        padding: 25px;
+    }
+
+}
+
+@media (max-width: 450px) {
+
+    .resume-item summary {
+        padding: 22px 2px;
+    }
+
+    .resume-heading {
+        font-size: 17px;
+    }
+
+    .project-stat {
+        font-size: 25px;
+    }
+
+}
