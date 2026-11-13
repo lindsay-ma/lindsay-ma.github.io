@@ -448,8 +448,8 @@ h4 {
 ========================================= */
 
 footer {
-    max-width: 1200px;
-    margin: auto;
+    width: 100%;
+    margin: 0;
 
     background: var(--charcoal);
     color: #c6c8c7;
