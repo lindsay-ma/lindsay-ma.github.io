@@ -903,33 +903,41 @@ footer p {
     }
 }
 
+
 /* SUBSTACK ARTICLE CARDS */
 
 .writing-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 30px;
     margin-top: 35px;
 }
 
 .writing-card {
     display: block;
+    padding: 0;
+    overflow: hidden;
     background: var(--off-white);
     border: 1px solid var(--line);
     text-decoration: none;
     color: var(--text);
-    transition: transform 0.25s ease;
+    transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
 .writing-card:hover {
     transform: translateY(-4px);
+    border-color: var(--gold);
 }
 
-.writing-card img {
+.writing-card > img {
     display: block;
     width: 100%;
-    height: 190px;
-    object-fit: cover;
+    height: auto;
+    max-height: 240px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+    background: var(--off-white);
 }
 
 .writing-card-content {
@@ -937,13 +945,13 @@ footer p {
 }
 
 .writing-card-content h3 {
-    font-family: Georgia, serif;
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 23px;
     font-weight: normal;
     margin: 12px 0;
 }
 
-.writing-card-content > p:not(.eyebrow) {
+.writing-card-content p {
     color: var(--muted);
     font-size: 14px;
     line-height: 1.8;
@@ -961,51 +969,4 @@ footer p {
     .writing-grid {
         grid-template-columns: 1fr;
     }
-}
-
-/* SUBSTACK ARTICLE CARD FIX */
-
-.writing-card {
-    display: block;
-    padding: 0;
-    overflow: hidden;
-    background: var(--off-white);
-    border: 1px solid var(--line);
-}
-
-.writing-card > img {
-    display: block;
-    width: 100%;
-    height: 220px;
-    object-fit: contain;
-    object-position: center;
-    background: var(--off-white);
-}
-
-.writing-card-content {
-    padding: 25px;
-}
-
-.writing-card-content h3 {
-    margin: 12px 0;
-}
-
-.writing-card-content p {
-    margin-top: 10px;
-}
-
-/* FINAL WRITING IMAGE FIX */
-
-.writing-card {
-    overflow: hidden;
-}
-
-.writing-card > img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: 240px;
-    object-fit: contain;
-    object-position: center;
-    margin: 0 auto;
 }
