@@ -918,3 +918,9 @@ footer span {
 .eco-section .eco-subsection {
     border-top: none;
 }
+
+/* REMOVE DIVIDER LINES IN MAGNA STOCK PITCH */
+
+#magna-pitch .eco-subsection {
+    border-top: none;
+}
