@@ -580,12 +580,12 @@ h4 {
 ========================================= */
 
 .eco-image-grid {
-    display: grid !important;
+    display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 20px;
     width: 100%;
     max-width: 850px;
-    margin: 35px auto 0;
+    margin: 35px auto 55px;
     align-items: start;
 }
 
