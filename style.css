@@ -912,3 +912,9 @@ footer span {
         grid-template-columns: 1fr;
     }
 }
+
+/* REMOVE DIVIDER LINES IN ECO SENTIER */
+
+.eco-section .eco-subsection {
+    border-top: none;
+}
