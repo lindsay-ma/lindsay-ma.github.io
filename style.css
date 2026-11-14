@@ -1,7 +1,5 @@
-/* =========================================
-   COLOUR PALETTE
-========================================= */
 
+/* COLOUR PALETTE */
 :root {
     --charcoal: #202326;
     --dark: #292d30;
@@ -14,11 +12,7 @@
     --line: #d0d2d0;
 }
 
-
-/* =========================================
-   GENERAL STYLING
-========================================= */
-
+/* GENERAL */
 * {
     box-sizing: border-box;
 }
@@ -45,11 +39,7 @@ h1, h2, h3, h4 {
     font-family: Georgia, "Times New Roman", serif;
 }
 
-
-/* =========================================
-   HEADER AND NAVIGATION
-========================================= */
-
+/* HEADER & NAVIGATION */
 .site-header {
     width: 100%;
     margin: 0;
@@ -95,11 +85,7 @@ nav > a.active {
     color: #c9b48e;
 }
 
-
-/* =========================================
-   MAIN CONTENT AND HEADINGS
-========================================= */
-
+/* MAIN CONTENT */
 main {
     max-width: 1050px;
     margin: auto;
@@ -143,11 +129,7 @@ h4 {
     margin: 0 0 9px;
 }
 
-
-/* =========================================
-   HOMEPAGE INTRODUCTION
-========================================= */
-
+/* HOMEPAGE INTRODUCTION */
 #about {
     padding: 115px 0;
 }
@@ -176,11 +158,7 @@ h4 {
     line-height: 1.9;
 }
 
-
-/* =========================================
-   SOCIAL LINKS
-========================================= */
-
+/* SOCIAL LINKS */
 .social-links {
     display: flex;
     gap: 25px;
@@ -201,11 +179,7 @@ h4 {
     color: var(--gold);
 }
 
-
-/* =========================================
-   HOMEPAGE EXPLORE SECTION
-========================================= */
-
+/* HOMEPAGE EXPLORE CARDS */
 .explore-section {
     padding: 75px 0 95px;
 }
@@ -220,20 +194,15 @@ h4 {
     gap: 20px;
 }
 
-.explore-card,
-.writing-card {
+.explore-card {
+    display: block;
     padding: 32px;
     background: var(--off-white);
     border: 1px solid #dedfdd;
     transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
-.explore-card {
-    display: block;
-}
-
-.explore-card:hover,
-.writing-card:hover {
+.explore-card:hover {
     border-color: var(--gold);
     transform: translateY(-3px);
 }
@@ -271,11 +240,7 @@ h4 {
     margin-left: 5px;
 }
 
-
-/* =========================================
-   ENTRIES AND EXPERIENCE
-========================================= */
-
+/* ENTRIES & EXPERIENCE */
 .subheading {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 10px;
@@ -319,11 +284,7 @@ h4 {
     color: var(--gold);
 }
 
-
-/* =========================================
-   SIMPLE LISTS
-========================================= */
-
+/* SIMPLE LISTS */
 .simple-list > div {
     display: grid;
     grid-template-columns: 145px 1fr;
@@ -346,55 +307,37 @@ h4 {
     color: #414649;
 }
 
-
-/* =========================================
-   WRITING AND PROJECT CARDS
-========================================= */
-
+/* WRITING & SUBSTACK PREVIEWS */
 .writing-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 22px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
 }
 
-.card-kicker {
-    color: var(--gold);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 2px;
+.writing-card {
+    display: block;
+    padding: 0;
+    background: transparent;
+    border: none;
+    overflow: visible;
+    transition: transform 0.25s ease;
 }
 
-.writing-card h3 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.4;
-    margin: 18px 0 12px;
+.writing-card:hover {
+    transform: translateY(-4px);
 }
 
-.writing-card p:not(.card-kicker) {
-    color: var(--muted);
-    font-size: 13px;
-    line-height: 1.8;
+.writing-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none;
+    aspect-ratio: auto;
+    object-fit: contain;
 }
 
-.writing-card a {
-    display: inline-block;
-    margin-top: 15px;
-    padding-bottom: 4px;
-    border-bottom: 1px solid var(--gold);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-
-/* =========================================
-   PHOTOGRAPHY
-========================================= */
-
+/* PHOTOGRAPHY */
 .photo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -448,11 +391,7 @@ h4 {
     text-decoration: underline;
 }
 
-
-/* =========================================
-   RESUME ACCORDION
-========================================= */
-
+/* RESUME ACCORDION */
 .resume-accordion {
     padding-top: 20px;
     display: flex;
@@ -525,11 +464,7 @@ h4 {
     border-top: 1px solid var(--line);
 }
 
-
-/* =========================================
-   ECO SENTIER PHOTOGRAPHS
-========================================= */
-
+/* ECO SENTIER */
 .eco-section {
     padding-bottom: 140px;
 }
@@ -564,11 +499,12 @@ h4 {
     max-width: 100%;
 }
 
+.eco-section .eco-subsection,
+#magna-pitch .eco-subsection {
+    border-top: none;
+}
 
-/* =========================================
-   ECO SENTIER INSTAGRAM BUTTON
-========================================= */
-
+/* ECO SENTIER INSTAGRAM BUTTON */
 .eco-instagram-button {
     display: flex;
     align-items: center;
@@ -615,11 +551,7 @@ h4 {
     font-size: 20px;
 }
 
-
-/* =========================================
-   PROJECT NAVIGATION BUTTONS
-========================================= */
-
+/* PROJECT NAVIGATION */
 .project-navigation {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -652,11 +584,7 @@ h4 {
     letter-spacing: 1.5px;
 }
 
-
-/* =========================================
-   PROJECT HIGHLIGHTS
-========================================= */
-
+/* PROJECT HIGHLIGHTS */
 .project-highlight {
     display: flex;
     flex-wrap: wrap;
@@ -680,11 +608,7 @@ h4 {
     margin-right: 25px;
 }
 
-
-/* =========================================
-   PROJECT PRESENTATION
-========================================= */
-
+/* PROJECT PRESENTATION */
 .presentation-section {
     margin: 45px 0 65px;
 }
@@ -710,16 +634,11 @@ h4 {
     border: none;
 }
 
-/* Presentation when placed inside the Magna entry layout */
 #magna-pitch .presentation-container {
     height: 750px;
 }
 
-
-/* =========================================
-   FOOTER
-========================================= */
-
+/* FOOTER */
 footer {
     width: 100%;
     margin: 0;
@@ -735,23 +654,8 @@ footer p {
     margin: 0;
 }
 
-
-/* =========================================
-   REMOVE PROJECT SUBSECTION DIVIDERS
-========================================= */
-
-.eco-section .eco-subsection,
-#magna-pitch .eco-subsection {
-    border-top: none;
-}
-
-
-/* =========================================
-   TABLET AND MOBILE
-========================================= */
-
+/* TABLET & MOBILE */
 @media (max-width: 750px) {
-
     .site-header {
         padding: 24px 25px;
         align-items: flex-start;
@@ -843,13 +747,8 @@ footer p {
     }
 }
 
-
-/* =========================================
-   SMALL PHONES
-========================================= */
-
+/* SMALL PHONES */
 @media (max-width: 450px) {
-
     .site-header {
         padding: 22px 20px;
     }
@@ -899,43 +798,6 @@ footer p {
     }
 
     .project-navigation {
-        grid-template-columns: 1fr;
-    }
-}
-
-
-/* SUBSTACK PREVIEW GALLERY */
-
-.writing-grid {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 25px;
-    margin-top: 35px;
-}
-
-.writing-card {
-    display: block;
-    padding: 0;
-    background: transparent;
-    border: none;
-    overflow: visible;
-    transition: transform 0.25s ease;
-}
-
-.writing-card:hover {
-    transform: translateY(-4px);
-}
-
-.writing-card > img {
-    display: block;
-    width: 100%;
-    height: auto;
-    max-height: none;
-    object-fit: unset;
-}
-
-@media (max-width: 750px) {
-    .writing-grid {
         grid-template-columns: 1fr;
     }
 }
