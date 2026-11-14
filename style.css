@@ -40,6 +40,11 @@ a {
     text-decoration: none;
 }
 
+h1, h2, h3, h4 {
+    color: var(--charcoal);
+    font-family: Georgia, "Times New Roman", serif;
+}
+
 
 /* =========================================
    HEADER AND NAVIGATION
@@ -65,7 +70,8 @@ a {
     white-space: nowrap;
 }
 
-.wordmark span {
+.wordmark span,
+footer span {
     color: var(--gold);
 }
 
@@ -91,7 +97,7 @@ nav > a.active {
 
 
 /* =========================================
-   MAIN CONTENT
+   MAIN CONTENT AND HEADINGS
 ========================================= */
 
 main {
@@ -112,19 +118,6 @@ main {
     font-weight: 700;
     letter-spacing: 2.5px;
     margin-bottom: 18px;
-}
-
-
-/* =========================================
-   HEADINGS
-========================================= */
-
-h1,
-h2,
-h3,
-h4 {
-    color: var(--charcoal);
-    font-family: Georgia, "Times New Roman", serif;
 }
 
 h1 {
@@ -156,8 +149,7 @@ h4 {
 ========================================= */
 
 #about {
-    padding-top: 115px;
-    padding-bottom: 115px;
+    padding: 115px 0;
 }
 
 .profile-layout {
@@ -215,8 +207,7 @@ h4 {
 ========================================= */
 
 .explore-section {
-    padding-top: 75px;
-    padding-bottom: 95px;
+    padding: 75px 0 95px;
 }
 
 .explore-section h2 {
@@ -229,15 +220,20 @@ h4 {
     gap: 20px;
 }
 
-.explore-card {
-    display: block;
+.explore-card,
+.writing-card {
     padding: 32px;
     background: var(--off-white);
     border: 1px solid #dedfdd;
     transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
-.explore-card:hover {
+.explore-card {
+    display: block;
+}
+
+.explore-card:hover,
+.writing-card:hover {
     border-color: var(--gold);
     transform: translateY(-3px);
 }
@@ -277,7 +273,7 @@ h4 {
 
 
 /* =========================================
-   EXPERIENCE AND OTHER PAGE ELEMENTS
+   ENTRIES AND EXPERIENCE
 ========================================= */
 
 .subheading {
@@ -361,18 +357,6 @@ h4 {
     gap: 22px;
 }
 
-.writing-card {
-    padding: 32px;
-    background: var(--off-white);
-    border: 1px solid #dedfdd;
-    transition: border-color 0.25s ease, transform 0.25s ease;
-}
-
-.writing-card:hover {
-    border-color: var(--gold);
-    transform: translateY(-3px);
-}
-
 .card-kicker {
     color: var(--gold);
     font-family: Arial, Helvetica, sans-serif;
@@ -429,6 +413,39 @@ h4 {
     color: var(--muted);
     font-size: 13px;
     line-height: 1.8;
+}
+
+.photo-feature {
+    margin-top: 35px;
+    padding: 35px;
+    background: var(--off-white);
+    border: 1px solid var(--line);
+}
+
+.photo-feature h3 {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: normal;
+    margin: 10px 0 15px;
+}
+
+.photo-feature p:last-child {
+    max-width: 650px;
+    line-height: 1.8;
+}
+
+.media-more {
+    margin-top: 30px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.media-more a {
+    color: var(--gold);
+}
+
+.media-more a:hover {
+    text-decoration: underline;
 }
 
 
@@ -510,78 +527,11 @@ h4 {
 
 
 /* =========================================
-   PROJECT HIGHLIGHTS
-========================================= */
-
-.project-highlight {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: baseline;
-    gap: 10px 15px;
-    margin-top: 35px;
-    padding: 25px 0;
-    border-top: 1px solid var(--line);
-    border-bottom: 1px solid var(--line);
-}
-
-.project-stat {
-    font-family: Georgia, serif;
-    font-size: 30px;
-    color: var(--gold);
-}
-
-.project-stat-label {
-    color: var(--muted);
-    font-size: 12px;
-    margin-right: 25px;
-}
-
-
-/* =========================================
-   MEDIA PAGE
-========================================= */
-
-.media-more {
-    margin-top: 30px;
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.media-more a {
-    color: var(--gold);
-    text-decoration: none;
-}
-
-.media-more a:hover {
-    text-decoration: underline;
-}
-
-.photo-feature {
-    margin-top: 35px;
-    padding: 35px;
-    background: var(--off-white);
-    border: 1px solid var(--line);
-}
-
-.photo-feature h3 {
-    font-family: Georgia, serif;
-    font-size: 27px;
-    font-weight: normal;
-    margin: 10px 0 15px;
-}
-
-.photo-feature p:last-child {
-    max-width: 650px;
-    line-height: 1.8;
-}
-
-
-/* =========================================
    ECO SENTIER PHOTOGRAPHS
 ========================================= */
 
 .eco-section {
-    padding-bottom: 110px;
+    padding-bottom: 140px;
 }
 
 .eco-image-grid {
@@ -624,12 +574,10 @@ h4 {
     align-items: center;
     gap: 15px;
     width: 100%;
-    box-sizing: border-box;
     padding: 13px 16px;
     background: var(--charcoal);
     color: white;
     border: 1px solid var(--charcoal);
-    text-decoration: none;
     transition: background 0.2s ease;
 }
 
@@ -669,29 +617,102 @@ h4 {
 
 
 /* =========================================
-   MOBILE
+   PROJECT NAVIGATION BUTTONS
 ========================================= */
 
-@media (max-width: 450px) {
+.project-navigation {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 40px;
+}
 
-    .eco-image-grid {
-        gap: 10px;
-    }
+.project-nav-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 115px;
+    padding: 24px;
+    background: var(--charcoal);
+    color: var(--white);
+    border: 1px solid var(--charcoal);
+    transition: background 0.25s ease, border-color 0.25s ease;
+}
 
-    .eco-image-right {
-        gap: 10px;
-    }
+.project-nav-button:hover {
+    background: #383d40;
+    border-color: var(--gold);
+}
 
-    .eco-instagram-button {
-        gap: 9px;
-        padding: 10px;
-    }
+.project-nav-button span {
+    margin-top: 15px;
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
 
-    .eco-instagram-button img {
-        width: 38px;
-        height: 38px;
-    }
 
+/* =========================================
+   PROJECT HIGHLIGHTS
+========================================= */
+
+.project-highlight {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 10px 15px;
+    margin-top: 35px;
+    padding: 25px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+}
+
+.project-stat {
+    font-family: Georgia, serif;
+    font-size: 30px;
+    color: var(--gold);
+}
+
+.project-stat-label {
+    color: var(--muted);
+    font-size: 12px;
+    margin-right: 25px;
+}
+
+
+/* =========================================
+   PROJECT PRESENTATION
+========================================= */
+
+.presentation-section {
+    margin: 45px 0 65px;
+}
+
+.presentation-section h3 {
+    font-family: Georgia, serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.presentation-container {
+    width: 100%;
+    height: 850px;
+    background: var(--off-white);
+    border: 1px solid var(--line);
+}
+
+.presentation-frame {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Presentation when placed inside the Magna entry layout */
+#magna-pitch .presentation-container {
+    height: 750px;
 }
 
 
@@ -702,20 +723,26 @@ h4 {
 footer {
     width: 100%;
     margin: 0;
+    padding: 32px 15px;
     background: var(--charcoal);
     color: #c6c8c7;
     text-align: center;
     font-size: 10px;
     letter-spacing: 2px;
-    padding: 32px 15px;
 }
 
 footer p {
     margin: 0;
 }
 
-footer span {
-    color: var(--gold);
+
+/* =========================================
+   REMOVE PROJECT SUBSECTION DIVIDERS
+========================================= */
+
+.eco-section .eco-subsection,
+#magna-pitch .eco-subsection {
+    border-top: none;
 }
 
 
@@ -745,8 +772,7 @@ footer span {
     }
 
     #about {
-        padding-top: 75px;
-        padding-bottom: 75px;
+        padding: 75px 0;
     }
 
     .profile-layout {
@@ -777,16 +803,13 @@ footer span {
         gap: 15px;
     }
 
-    .writing-grid {
+    .writing-grid,
+    .explore-grid {
         grid-template-columns: 1fr;
     }
 
     .photo-grid {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .explore-grid {
-        grid-template-columns: 1fr;
     }
 
     .resume-accordion {
@@ -813,6 +836,10 @@ footer span {
 
     .photo-feature {
         padding: 25px;
+    }
+
+    .presentation-container {
+        height: 600px;
     }
 }
 
@@ -856,119 +883,22 @@ footer span {
         font-size: 25px;
     }
 
-    .eco-image-grid {
+    .eco-image-grid,
+    .eco-image-right {
         gap: 10px;
     }
 
-}
+    .eco-instagram-button {
+        gap: 9px;
+        padding: 10px;
+    }
 
+    .eco-instagram-button img {
+        width: 38px;
+        height: 38px;
+    }
 
-/* =========================================
-   ECO SENTIER SECTION SPACING
-========================================= */
-
-.eco-section {
-    padding-bottom: 140px;
-}
-
-/* =========================================
-   PROJECT NAVIGATION BUTTONS
-========================================= */
-
-.project-navigation {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 18px;
-    margin-top: 40px;
-}
-
-.project-nav-button {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 115px;
-    padding: 24px;
-    background: var(--charcoal);
-    color: var(--white);
-    border: 1px solid var(--charcoal);
-    transition: background 0.25s ease, border-color 0.25s ease;
-}
-
-.project-nav-button:hover {
-    background: #383d40;
-    border-color: var(--gold);
-}
-
-.project-nav-button span {
-    margin-top: 15px;
-    color: var(--gold);
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-}
-
-@media (max-width: 600px) {
     .project-navigation {
         grid-template-columns: 1fr;
     }
-}
-
-/* REMOVE DIVIDER LINES IN ECO SENTIER */
-
-.eco-section .eco-subsection {
-    border-top: none;
-}
-
-/* REMOVE DIVIDER LINES IN MAGNA STOCK PITCH */
-
-#magna-pitch .eco-subsection {
-    border-top: none;
-}
-
-/* MAGNA PRESENTATION */
-
-.presentation-section {
-    margin: 45px 0 65px;
-}
-
-.presentation-section h3 {
-    font-family: Georgia, serif;
-    font-size: 25px;
-    font-weight: 400;
-    margin-bottom: 25px;
-}
-
-.presentation-container {
-    width: 100%;
-    height: 850px;
-    background: var(--off-white);
-    border: 1px solid var(--line);
-}
-
-.presentation-frame {
-    display: block;
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-@media (max-width: 750px) {
-    .presentation-container {
-        height: 600px;
-    }
-}
-
-/* PRESENTATION SUBSECTION */
-
-#magna-pitch .presentation-container {
-    width: 100%;
-    height: 750px;
-    border: 1px solid var(--line);
-}
-
-#magna-pitch .presentation-frame {
-    width: 100%;
-    height: 100%;
-    display: block;
-    border: none;
 }
