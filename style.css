@@ -918,7 +918,7 @@ footer p {
     padding: 0;
     background: transparent;
     border: none;
-    overflow: hidden;
+    overflow: visible;
     transition: transform 0.25s ease;
 }
 
@@ -930,7 +930,8 @@ footer p {
     display: block;
     width: 100%;
     height: auto;
-    object-fit: contain;
+    max-height: none;
+    object-fit: unset;
 }
 
 @media (max-width: 750px) {
