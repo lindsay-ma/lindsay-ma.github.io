@@ -993,3 +993,19 @@ footer p {
 .writing-card-content p {
     margin-top: 10px;
 }
+
+/* FINAL WRITING IMAGE FIX */
+
+.writing-card {
+    overflow: hidden;
+}
+
+.writing-card > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 240px;
+    object-fit: contain;
+    object-position: center;
+    margin: 0 auto;
+}
