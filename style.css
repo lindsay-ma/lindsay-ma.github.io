@@ -811,3 +811,69 @@ nav .social-icon {
 nav .social-icon:hover {
     color: var(--gold);
 }
+
+/* PHOTOGRAPHY COLLECTION */
+.photo-feature {
+    background: #fff;
+    color: #222;
+    padding: 30px;
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.photo-feature-info {
+    max-width: 750px;
+}
+
+.photo-feature-info h3 {
+    margin-bottom: 12px;
+}
+
+.photo-feature-info p:last-child {
+    line-height: 1.8;
+}
+
+/* HORIZONTAL PHOTO GALLERY */
+.photo-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 5px 0 12px;
+    scroll-behavior: smooth;
+}
+
+.photo-gallery img {
+    flex: 0 0 auto;
+    height: 240px;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    display: block;
+}
+
+/* GALLERY SCROLLBAR */
+.photo-gallery::-webkit-scrollbar {
+    height: 5px;
+}
+
+.photo-gallery::-webkit-scrollbar-thumb {
+    background: #c8c8c8;
+    border-radius: 10px;
+}
+
+@media (max-width: 750px) {
+    .photo-feature {
+        padding: 20px;
+    }
+
+    .photo-gallery img {
+        height: 190px;
+    }
+}
