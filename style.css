@@ -904,65 +904,33 @@ footer p {
 }
 
 
-/* SUBSTACK ARTICLE CARDS */
+/* SUBSTACK PREVIEW GALLERY */
 
 .writing-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 30px;
+    gap: 25px;
     margin-top: 35px;
 }
 
 .writing-card {
     display: block;
     padding: 0;
+    background: transparent;
+    border: none;
     overflow: hidden;
-    background: var(--off-white);
-    border: 1px solid var(--line);
-    text-decoration: none;
-    color: var(--text);
-    transition: transform 0.25s ease, border-color 0.25s ease;
+    transition: transform 0.25s ease;
 }
 
 .writing-card:hover {
     transform: translateY(-4px);
-    border-color: var(--gold);
 }
 
 .writing-card > img {
     display: block;
     width: 100%;
     height: auto;
-    max-height: 240px;
     object-fit: contain;
-    object-position: center;
-    margin: 0 auto;
-    background: var(--off-white);
-}
-
-.writing-card-content {
-    padding: 25px;
-}
-
-.writing-card-content h3 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 23px;
-    font-weight: normal;
-    margin: 12px 0;
-}
-
-.writing-card-content p {
-    color: var(--muted);
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.writing-card-content span {
-    display: inline-block;
-    margin-top: 15px;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    color: var(--gold);
 }
 
 @media (max-width: 750px) {
