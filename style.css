@@ -438,6 +438,7 @@ h4 {
     object-fit: contain;
 }
 
+
 /* =========================================
    PHOTOGRAPHY COLLECTIONS
 ========================================= */
@@ -447,9 +448,9 @@ h4 {
     flex-direction: column;
     gap: 25px;
     margin-top: 40px;
-    padding: 0;
-    background: transparent;
-    border: none;
+    padding: 30px;
+    background: var(--paper);
+    border: 1px solid var(--line);
 }
 
 .photo-feature-info {
@@ -474,25 +475,23 @@ h4 {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: flex-start;
     gap: 15px;
     width: 100%;
-    max-width: 100%;
     overflow-x: auto;
     overflow-y: hidden;
-    padding: 0 0 12px;
+    padding-bottom: 12px;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
 }
 
 .photo-gallery img {
     display: block;
-    flex: 0 0 auto;
-    width: auto;
-    height: 180px;
+    flex: 0 0 calc((100% - 30px) / 3);
+    width: calc((100% - 30px) / 3);
+    height: 220px;
     max-width: none;
     object-fit: contain;
-    background: transparent;
+    background: var(--ivory);
 }
 
 /* GALLERY SCROLLBAR */
@@ -509,6 +508,28 @@ h4 {
 .photo-gallery::-webkit-scrollbar-track {
     background: #edf0f1;
     border-radius: 10px;
+}
+
+/* MOBILE */
+
+@media (max-width: 750px) {
+    .photo-feature {
+        padding: 22px;
+    }
+
+    .photo-gallery img {
+        height: 180px;
+    }
+}
+
+@media (max-width: 450px) {
+    .photo-feature {
+        padding: 16px;
+    }
+
+    .photo-gallery img {
+        height: 145px;
+    }
 }
 
 /* =========================================
