@@ -1199,6 +1199,7 @@ footer span {
         font-size: 19px;
     }
 }
+
 /* =========================================
    FULL-WIDTH TORONTO SKYLINE EXPLORE SECTION
 ========================================= */
@@ -1206,46 +1207,39 @@ footer span {
 .explore-section {
     position: relative;
     isolation: isolate;
-    overflow: hidden;
 
-    /* Extend to the actual edges of the screen */
+    /* Break completely out of main's padding */
+    left: 50%;
+    transform: translateX(-50%);
     width: 100vw;
     max-width: none;
-    margin-left: calc(50% - 50vw);
 
-    /* Shorter section */
-    min-height: auto;
-    padding: 90px 7% 65px;
+    /* Let the cards determine the section height */
+    min-height: 0;
+    margin: 0;
+    padding: 75px 7% 55px;
 
-    background: #10283e;
+    /* Use the photo as a background, not an oversized image element */
+    background-color: #10283e;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(10, 27, 43, 0.02) 0%,
+            rgba(10, 27, 43, 0.08) 30%,
+            rgba(10, 27, 43, 0.40) 55%,
+            rgba(10, 27, 43, 0.82) 78%,
+            #10283e 100%
+        ),
+        url("skyline.jpg");
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
 }
 
-/* Skyline photograph */
-.explore-background {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    object-fit: cover;
-    object-position: center 45%;
-    z-index: 0;
-}
-
-/* Fade from photograph into navy */
+/* Hide the old image and overlay elements */
+.explore-background,
 .explore-overlay {
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-
-    background: linear-gradient(
-        to bottom,
-        rgba(10, 27, 43, 0.02) 0%,
-        rgba(10, 27, 43, 0.08) 30%,
-        rgba(10, 27, 43, 0.40) 55%,
-        rgba(10, 27, 43, 0.82) 78%,
-        #10283e 100%
-    );
+    display: none;
 }
 
 /* Content */
@@ -1267,7 +1261,7 @@ footer span {
 }
 
 .explore-section .explore-grid {
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 .explore-section .explore-card {
@@ -1277,10 +1271,10 @@ footer span {
 /* Mobile */
 @media (max-width: 750px) {
     .explore-section {
-        padding: 75px 7% 50px;
+        padding: 65px 7% 45px;
     }
 
     .explore-section .explore-grid {
-        margin-top: 28px;
+        margin-top: 25px;
     }
 }
