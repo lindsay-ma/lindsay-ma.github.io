@@ -340,26 +340,40 @@
         <p>LINDSAY MA <span> | </span> PORTFOLIO</p>
     </footer>
 
-<script>
+    <script>
     const quotes = [
-        "“If you love something, set it free. If it comes back, it is yours. If it doesn't, it never was.”",
-
-        "“And once the storm is over, you won't remember how you made it through, how you managed to survive. You won't even be sure, in fact, whether the storm is really over. But one thing is certain. When you come out of the storm, you won't be the same person who walked in. That's what this storm's all about.”",
-
-        "“In the midst of winter, I found there was, within me, an invincible summer.”",
-
-        "“It is not death that a man should fear, but he should fear never beginning to live.”",
-
-        "“Had he not read so many books, had he not seen the wider world, he might have been like his father and brother—content to toil and live quietly on this land, perhaps even feeling satisfied and happy.”"
+        {
+            text: "“If you love something, set it free. If it comes back, it is yours. If it doesn't, it never was.”",
+            author: "Anonymous"
+        },
+        {
+            text: "“And once the storm is over, you won't remember how you made it through, how you managed to survive. You won't even be sure, in fact, whether the storm is really over. But one thing is certain. When you come out of the storm, you won't be the same person who walked in. That's what this storm's all about.”",
+            author: "Haruki Murakami, Kafka on the Shore"
+        },
+        {
+            text: "“In the midst of winter, I found there was, within me, an invincible summer.”",
+            author: "Albert Camus, Return to Tipasa"
+        },
+        {
+            text: "“It is not death that a man should fear, but he should fear never beginning to live.”",
+            author: "George Long, The Philosophy of Antoninus"
+        },
+        {
+            text: "“Had he not read so many books, had he not seen the wider world, he might have been like his father and brother—content to toil and live quietly on this land, perhaps even feeling satisfied and happy.”",
+            author: "Lu Yao, The Ordinary World"
+        }
     ];
 
     let currentQuote = 0;
 
     const quoteText = document.getElementById("quoteText");
+    const quoteAuthor = document.getElementById("quoteAuthor");
     const quoteCounter = document.getElementById("quoteCounter");
 
     function showQuote() {
-        quoteText.textContent = quotes[currentQuote];
+        quoteText.textContent = quotes[currentQuote].text;
+        quoteAuthor.textContent = "— " + quotes[currentQuote].author;
+
         quoteCounter.textContent =
             String(currentQuote + 1).padStart(2, "0") +
             " / " +
