@@ -227,7 +227,7 @@ h4 {
     max-width: 225px;
     aspect-ratio: 1;
     object-fit: cover;
-    border-radius: 2px;
+    border-radius: 50%;
     filter: saturate(85%);
 }
 
@@ -449,51 +449,20 @@ h4 {
     flex-direction: column;
     gap: 25px;
     margin-top: 40px;
-    padding: 30px;
-    background: var(--paper);
-    border-top: 2px solid var(--azure);
-}
-
-.photo-feature-info {
-    max-width: 750px;
-}
-
-.photo-feature-info h3 {
-    margin: 8px 0 12px;
-    font-size: 32px;
-}
-
-.photo-feature-info p:last-child {
-    max-width: 680px;
-    margin-bottom: 0;
-    color: #65727c;
-    line-height: 1.9;
+    padding: 0;
+    background: transparent;
+    border: none;
 }
 
 /* HORIZONTAL PHOTO GALLERIES */
-.photo-gallery {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 15px;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 5px 0 12px;
-    scroll-behavior: smooth;
-    scrollbar-width: thin;
-    scrollbar-color: #a9c9dc #edf0f1;
-}
-
 .photo-gallery img {
-    flex: 0 0 calc((100% - 30px) / 3);
-    width: calc((100% - 30px) / 3);
+    flex: 0 0 auto;
+    width: auto;
     height: 180px;
-    min-width: 0;
+    max-width: none;
     object-fit: contain;
     display: block;
-    background: var(--ivory);
+    background: transparent;
 }
 
 /* GALLERY SCROLLBAR */
@@ -1014,12 +983,6 @@ footer span {
 
     .project-navigation {
         grid-template-columns: 1fr;
-    }
-
-    .photo-gallery img {
-        flex-basis: calc((100% - 15px) / 2);
-        width: calc((100% - 15px) / 2);
-        height: 145px;
     }
 
     .photo-feature-info h3 {
