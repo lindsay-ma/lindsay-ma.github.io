@@ -236,7 +236,7 @@ h4 {
 }
 
 .about-copy p:not(.eyebrow) {
-    max-width: 650px;
+    max-width: 100%;
     color: #65727c;
     font-size: 14px;
     line-height: 2;
