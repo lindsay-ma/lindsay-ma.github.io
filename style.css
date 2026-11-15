@@ -1,3 +1,4 @@
+
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap');
 
@@ -427,11 +428,14 @@ h4 {
     transform: translateY(-4px);
 }
 
+/* SMALLER, CENTRED SUBSTACK PREVIEW IMAGES */
+
 .writing-card img {
     display: block;
-    width: 100%;
+    width: 78%;
+    max-height: 230px;
     height: auto;
-    max-height: none;
+    margin: 0 auto;
     aspect-ratio: auto;
     object-fit: contain;
 }
@@ -1120,6 +1124,18 @@ footer span {
     font-style: italic;
 }
 
+/* QUOTE AUTHOR */
+
+.quote-author {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-family: var(--body-font);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
 .quote-counter {
     margin: 22px 0 0;
     color: var(--muted);
@@ -1154,7 +1170,7 @@ footer span {
     border-color: var(--navy);
 }
 
-/* MOBILE */
+/* MOBILE QUOTE LAYOUT */
 
 @media (max-width: 450px) {
 
