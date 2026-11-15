@@ -877,3 +877,75 @@ nav .social-icon:hover {
         height: 190px;
     }
 }
+
+/* PHOTOGRAPHY COLLECTIONS */
+.photo-feature {
+    background: #fff;
+    color: #222;
+    padding: 30px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.photo-feature-info {
+    max-width: 750px;
+}
+
+.photo-feature-info h3 {
+    margin-bottom: 12px;
+}
+
+.photo-feature-info p:last-child {
+    line-height: 1.8;
+}
+
+/* HORIZONTAL PHOTO GALLERIES */
+.photo-gallery {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 5px 0 12px;
+    scroll-behavior: smooth;
+}
+
+.photo-gallery img {
+    flex: 0 0 auto;
+    height: 180px;
+    width: auto;
+    max-width: none;
+    object-fit: contain;
+    display: block;
+}
+
+/* GALLERY SCROLLBAR */
+.photo-gallery::-webkit-scrollbar {
+    height: 5px;
+}
+
+.photo-gallery::-webkit-scrollbar-thumb {
+    background: #c8c8c8;
+    border-radius: 10px;
+}
+
+.photo-gallery::-webkit-scrollbar-track {
+    background: #eee;
+    border-radius: 10px;
+}
+
+/* MOBILE */
+@media (max-width: 750px) {
+    .photo-feature {
+        padding: 20px;
+    }
+
+    .photo-gallery img {
+        height: 150px;
+    }
+}
