@@ -1011,3 +1011,40 @@ footer span {
         height: 145px;
     }
 }
+
+
+/* FORCE PHOTOGRAPHY GALLERIES TO SCROLL HORIZONTALLY */
+
+#photography .photo-gallery {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 15px;
+    padding-bottom: 15px;
+}
+
+#photography .photo-gallery img {
+    display: block;
+    flex: 0 0 auto !important;
+    width: auto !important;
+    height: 180px;
+    max-width: none !important;
+    object-fit: contain;
+}
+
+@media (max-width: 750px) {
+    #photography .photo-gallery img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 450px) {
+    #photography .photo-gallery img {
+        height: 145px;
+    }
+}
