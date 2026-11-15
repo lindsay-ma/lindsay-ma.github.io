@@ -200,7 +200,7 @@ h4 {
 }
 
 .section > p {
-    max-width: 700px;
+    max-width: 100%;
     color: #65727c;
     line-height: 1.95;
 }
