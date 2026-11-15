@@ -97,37 +97,45 @@
                 </a>
 
             </div>
-            
+
             <!-- FAVOURITE QUOTES -->
             <div class="quotes-section">
-            
+
                 <div class="quotes-heading">
                     <h3>My favourite quotes.</h3>
                 </div>
-            
+
                 <div class="quote-carousel">
-            
+
                     <button class="quote-arrow" id="prevQuote"
                             aria-label="Previous quote">
                         &#8592;
                     </button>
-            
+
                     <div class="quote-content">
+
                         <p class="quote-text" id="quoteText">
                             “If you love something, set it free. If it comes back,
                             it is yours. If it doesn't, it never was.”
                         </p>
-            
-                        <p class="quote-counter" id="quoteCounter">01 / 05</p>
+
+                        <p class="quote-author" id="quoteAuthor">
+                            — Anonymous
+                        </p>
+
+                        <p class="quote-counter" id="quoteCounter">
+                            01 / 05
+                        </p>
+
                     </div>
-            
+
                     <button class="quote-arrow" id="nextQuote"
                             aria-label="Next quote">
                         &#8594;
                     </button>
-            
+
                 </div>
-            
+
             </div>
 
         </section>
@@ -340,55 +348,66 @@
         <p>LINDSAY MA <span> | </span> PORTFOLIO</p>
     </footer>
 
+    <!-- QUOTE CAROUSEL SCRIPT -->
     <script>
-    const quotes = [
-        {
-            text: "“If you love something, set it free. If it comes back, it is yours. If it doesn't, it never was.”",
-            author: "Anonymous"
-        },
-        {
-            text: "“And once the storm is over, you won't remember how you made it through, how you managed to survive. You won't even be sure, in fact, whether the storm is really over. But one thing is certain. When you come out of the storm, you won't be the same person who walked in. That's what this storm's all about.”",
-            author: "Haruki Murakami, Kafka on the Shore"
-        },
-        {
-            text: "“In the midst of winter, I found there was, within me, an invincible summer.”",
-            author: "Albert Camus, Return to Tipasa"
-        },
-        {
-            text: "“It is not death that a man should fear, but he should fear never beginning to live.”",
-            author: "George Long, The Philosophy of Antoninus"
-        },
-        {
-            text: "“Had he not read so many books, had he not seen the wider world, he might have been like his father and brother—content to toil and live quietly on this land, perhaps even feeling satisfied and happy.”",
-            author: "Lu Yao, The Ordinary World"
+    document.addEventListener("DOMContentLoaded", function () {
+
+        const quotes = [
+            {
+                text: "“If you love something, set it free. If it comes back, it is yours. If it doesn't, it never was.”",
+                author: "Anonymous"
+            },
+            {
+                text: "“And once the storm is over, you won't remember how you made it through, how you managed to survive. You won't even be sure, in fact, whether the storm is really over. But one thing is certain. When you come out of the storm, you won't be the same person who walked in. That's what this storm's all about.”",
+                author: "Haruki Murakami, Kafka on the Shore"
+            },
+            {
+                text: "“In the midst of winter, I found there was, within me, an invincible summer.”",
+                author: "Albert Camus, Return to Tipasa"
+            },
+            {
+                text: "“It is not death that a man should fear, but he should fear never beginning to live.”",
+                author: "George Long, The Philosophy of Antoninus"
+            },
+            {
+                text: "“Had he not read so many books, had he not seen the wider world, he might have been like his father and brother—content to toil and live quietly on this land, perhaps even feeling satisfied and happy.”",
+                author: "Lu Yao, The Ordinary World"
+            }
+        ];
+
+        let currentQuote = 0;
+
+        const quoteText = document.getElementById("quoteText");
+        const quoteAuthor = document.getElementById("quoteAuthor");
+        const quoteCounter = document.getElementById("quoteCounter");
+
+        const prevButton = document.getElementById("prevQuote");
+        const nextButton = document.getElementById("nextQuote");
+
+        function showQuote() {
+            quoteText.textContent = quotes[currentQuote].text;
+            quoteAuthor.textContent = "— " + quotes[currentQuote].author;
+
+            quoteCounter.textContent =
+                String(currentQuote + 1).padStart(2, "0") +
+                " / " +
+                String(quotes.length).padStart(2, "0");
         }
-    ];
 
-    let currentQuote = 0;
+        prevButton.addEventListener("click", function () {
+            currentQuote = (currentQuote - 1 + quotes.length) % quotes.length;
+            showQuote();
+        });
 
-    const quoteText = document.getElementById("quoteText");
-    const quoteAuthor = document.getElementById("quoteAuthor");
-    const quoteCounter = document.getElementById("quoteCounter");
+        nextButton.addEventListener("click", function () {
+            currentQuote = (currentQuote + 1) % quotes.length;
+            showQuote();
+        });
 
-    function showQuote() {
-        quoteText.textContent = quotes[currentQuote].text;
-        quoteAuthor.textContent = "— " + quotes[currentQuote].author;
-
-        quoteCounter.textContent =
-            String(currentQuote + 1).padStart(2, "0") +
-            " / " +
-            String(quotes.length).padStart(2, "0");
-    }
-
-    document.getElementById("prevQuote").addEventListener("click", () => {
-        currentQuote = (currentQuote - 1 + quotes.length) % quotes.length;
         showQuote();
-    });
 
-    document.getElementById("nextQuote").addEventListener("click", () => {
-        currentQuote = (currentQuote + 1) % quotes.length;
-        showQuote();
     });
-</script>
+    </script>
+
 </body>
 </html>
