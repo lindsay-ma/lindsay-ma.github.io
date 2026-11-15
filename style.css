@@ -1200,28 +1200,64 @@ footer span {
     }
 }
 
-/* TORONTO SKYLINE */
 
-.skyline-banner {
-    width: 100%;
-    height: 300px;
-    overflow: hidden;
+/* EXPLORE SECTION WITH TORONTO SKYLINE */
+
+.explore-section {
     position: relative;
-    margin: 35px 0 0;
+    isolation: isolate;
+    overflow: hidden;
+    width: 100%;
+    padding: 75px 7%;
+    margin-top: 35px;
 }
 
-.skyline-banner img {
-    display: block;
+.explore-background {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center 55%;
-    filter: brightness(0.82);
+    z-index: -2;
+}
+
+.explore-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(15, 35, 55, 0.05) 0%,
+        rgba(15, 35, 55, 0.18) 35%,
+        rgba(15, 35, 55, 0.75) 65%,
+        rgba(15, 35, 55, 0.97) 100%
+    );
+    z-index: -1;
+}
+
+.explore-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.explore-section .eyebrow,
+.explore-section h2 {
+    color: #f8f5ef;
+}
+
+.explore-section .explore-grid {
+    margin-top: 35px;
+}
+
+.explore-section .explore-card {
+    background: rgba(255, 255, 255, 0.96);
 }
 
 @media (max-width: 600px) {
-    .skyline-banner {
-        height: 190px;
-        margin-top: 20px;
+    .explore-section {
+        padding: 55px 6%;
     }
+}
 }
