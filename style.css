@@ -420,7 +420,9 @@ h4 {
 .writing-card {
     display: block;
     overflow: hidden;
-    background: var(--paper);
+    background: transparent;
+    border: none;
+    box-shadow: none;
     transition: transform 0.25s ease;
 }
 
@@ -432,12 +434,14 @@ h4 {
 
 .writing-card img {
     display: block;
-    width: 78%;
-    max-height: 230px;
+    width: 65%;
     height: auto;
+    max-height: none;
     margin: 0 auto;
     aspect-ratio: auto;
-    object-fit: contain;
+    object-fit: initial;
+    border: none;
+    box-shadow: none;
 }
 
 /* =========================================
@@ -1124,16 +1128,18 @@ footer span {
     font-style: italic;
 }
 
-/* QUOTE AUTHOR */
-
 .quote-author {
-    margin: 12px 0 0;
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    margin: 16px 0 0;
     color: var(--muted);
     font-family: var(--body-font);
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     letter-spacing: 1px;
     line-height: 1.6;
+    text-align: center;
 }
 
 .quote-counter {
