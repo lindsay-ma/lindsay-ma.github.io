@@ -1279,3 +1279,80 @@ footer span {
         margin-top: 25px;
     }
 }
+
+
+/* YEARBOOK DESIGN */
+
+.yearbook-project {
+    margin-top: 65px;
+    padding-top: 45px;
+    border-top: 1px solid var(--navy);
+}
+
+.yearbook-intro {
+    max-width: 720px;
+    margin-bottom: 30px;
+}
+
+.yearbook-eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.yearbook-intro h2 {
+    margin-bottom: 15px;
+}
+
+.yearbook-intro > p:last-child {
+    line-height: 1.7;
+    max-width: 650px;
+}
+
+.yearbook-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: start;
+}
+
+.yearbook-item {
+    margin: 0;
+    min-width: 0;
+}
+
+.yearbook-item img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(20, 35, 55, 0.15);
+    transition: transform 0.25s ease;
+}
+
+.yearbook-item img:hover {
+    transform: translateY(-4px);
+}
+
+.yearbook-item figcaption {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 12px;
+}
+
+.yearbook-item figcaption strong {
+    font-weight: 600;
+}
+
+.yearbook-item figcaption span {
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+@media (max-width: 700px) {
+    .yearbook-gallery {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
