@@ -1389,3 +1389,17 @@ footer span {
     width: 100%;
     max-width: none;
 }
+/* FULL-WIDTH PROJECT DESCRIPTIONS */
+
+.eco-subsection {
+    display: block !important;
+}
+
+.eco-subsection > div {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.eco-subsection p {
+    max-width: 100% !important;
+}
