@@ -1472,3 +1472,6 @@ footer span {
         padding: 12px;
     }
 }
+.project-page #yearbook .entry {
+    border-top: none;
+}
