@@ -772,6 +772,7 @@ h4 {
     background: var(--navy);
     color: var(--paper);
     border: 1px solid var(--navy);
+    border-radius: 12px;
     transition: background 0.25s ease,
                 border-color 0.25s ease;
 }
