@@ -1304,17 +1304,15 @@ footer span {
     max-width: none;
     line-height: 1.7;
 }
-
 /* YEARBOOK GALLERY */
 
 .project-page .yearbook-gallery {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 2fr);
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 2fr);
     align-items: start;
     gap: 20px;
     width: 100%;
     margin-top: 30px;
-    padding-bottom: 15px;
 }
 
 .project-page .yearbook-item {
@@ -1322,20 +1320,29 @@ footer span {
     margin: 0;
 }
 
+/* First and third: double-page spreads */
+.project-page .yearbook-item:nth-child(1) .yearbook-image,
+.project-page .yearbook-item:nth-child(3) .yearbook-image {
+    aspect-ratio: 17 / 11;
+}
+
+/* Second: single page */
+.project-page .yearbook-item:nth-child(2) .yearbook-image {
+    aspect-ratio: 8.5 / 11;
+}
+
 .project-page .yearbook-image {
     width: 100%;
-    height: auto;
+    overflow: hidden;
     background: transparent;
-    border: none;
 }
 
 .project-page .yearbook-image img {
     display: block;
     width: 100%;
-    height: auto;
-    max-width: 100%;
+    height: 100%;
     object-fit: contain;
-    background: transparent;
+    object-position: center;
     border: none;
     border-radius: 0;
     box-shadow: none;
