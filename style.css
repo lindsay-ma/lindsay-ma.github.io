@@ -1279,6 +1279,7 @@ footer span {
         margin-top: 25px;
     }
 }
+
 /* =========================================
    YEARBOOK DESIGN
 ========================================= */
@@ -1315,29 +1316,37 @@ footer span {
 /* YEARBOOK GALLERY */
 
 .yearbook-gallery {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 2fr);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
     gap: 20px;
     width: 100%;
     margin-top: 30px;
     padding-bottom: 15px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
 }
 
 .yearbook-item {
+    flex: 0 0 auto;
     min-width: 0;
     margin: 0;
 }
 
 .yearbook-image {
-    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    height: 300px;
     background: transparent;
     border: none;
 }
 
 .yearbook-image img {
     display: block;
-    width: 100%;
-    height: auto;
+    width: auto;
+    height: 100%;
     max-width: none;
     object-fit: contain;
     background: transparent;
@@ -1363,14 +1372,16 @@ footer span {
 }
 
 /* =========================================
-   PROJECTS PAGE ADJUSTMENTS
+   PROJECTS PAGE ONLY
 ========================================= */
 
-/* PROJECTS PAGE ONLY */
+/* THREE PROJECT BUTTONS IN ONE ROW */
 
 .project-page .project-navigation {
+    display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 15px;
+    width: 100%;
 }
 
 .project-page .project-nav-button {
@@ -1379,69 +1390,105 @@ footer span {
 
 /* FULL-WIDTH PROJECT DESCRIPTIONS */
 
-.eco-section .eco-subsection,
-#magna-pitch .eco-subsection,
-.yearbook-project .eco-subsection {
+.project-page .eco-subsection {
     display: block;
     width: 100%;
     max-width: none;
 }
 
-.eco-section .eco-subsection > div,
-#magna-pitch .eco-subsection > div,
-.yearbook-project .eco-subsection > div {
+.project-page .eco-subsection > div {
     width: 100%;
     max-width: none;
 }
 
-.eco-section .eco-subsection p,
-#magna-pitch .eco-subsection p,
-.yearbook-project .eco-subsection p {
+.project-page .eco-subsection p,
+.project-page .entry p {
     width: 100%;
     max-width: none;
 }
 
-/* REMOVE DESCRIPTION WIDTH LIMITS */
+/* INVESTMENT PRESENTATION BESIDE HEADING */
 
-.eco-section .entry p,
-#magna-pitch .entry p,
-.yearbook-project .entry p {
-    width: 100%;
-    max-width: none;
+#magna-pitch .presentation-section {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    align-items: start;
+    gap: 35px;
+    margin: 45px 0 65px;
 }
 
-/* MOBILE */
+#magna-pitch .presentation-section h3 {
+    margin: 0;
+    font-size: 28px;
+}
+
+#magna-pitch .presentation-container {
+    width: 100%;
+    height: 750px;
+    background: var(--paper);
+    border: 1px solid var(--line);
+}
+
+#magna-pitch .presentation-frame {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* =========================================
+   MEDIA PAGE BUTTONS
+========================================= */
+
+/* Keep Media buttons in their original two-column layout */
+
+.media-page .project-navigation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.media-page .project-nav-button {
+    min-height: 125px;
+    padding: 25px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
 
 @media (max-width: 750px) {
-    .yearbook-gallery {
-        display: flex;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-        overscroll-behavior-x: contain;
+
+    .yearbook-image {
+        height: 220px;
     }
 
-    .yearbook-item {
-        flex: 0 0 auto;
+    #magna-pitch .presentation-section {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
-    .yearbook-item:first-child {
-        width: 170px;
-    }
-
-    .yearbook-item:not(:first-child) {
-        width: 340px;
-    }
-
-    .project-navigation {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
+    #magna-pitch .presentation-container {
+        height: 600px;
     }
 }
 
 @media (max-width: 450px) {
-    .project-navigation {
-        grid-template-columns: 1fr;
+
+    .project-page .project-navigation {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 8px;
+    }
+
+    .project-page .project-nav-button {
+        min-height: 110px;
+        padding: 12px;
+    }
+
+    .media-page .project-navigation {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .media-page .project-nav-button {
+        padding: 18px;
     }
 }
