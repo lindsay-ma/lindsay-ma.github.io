@@ -1366,3 +1366,26 @@ footer span {
 @media (max-width: 700px) {
     .yearbook-image { height: 220px; }
 }
+/* PROJECTS PAGE ADJUSTMENTS */
+
+/* Fit all three project buttons in one row */
+.project-navigation {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+}
+
+.project-nav-button {
+    min-width: 0;
+}
+
+/* Let project descriptions use the full available width */
+.project-page .entry,
+.project-page .eco-subsection {
+    grid-template-columns: 1fr;
+}
+
+.project-page .entry > div,
+.project-page .eco-subsection > div {
+    width: 100%;
+    max-width: none;
+}
