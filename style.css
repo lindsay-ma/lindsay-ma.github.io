@@ -1,4 +1,3 @@
-
 /* FONTS */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600;700&display=swap');
 
@@ -599,7 +598,6 @@ h4 {
     border: 1px solid var(--line);
     transition: border-color 0.2s ease;
 }
-
 .resume-item:hover,
 .resume-item[open] {
     border-color: var(--azure);
@@ -992,7 +990,6 @@ footer span {
         height: 600px;
     }
 }
-
 /* =========================================
    SMALL PHONES
 ========================================= */
@@ -1065,10 +1062,6 @@ footer span {
     .eco-instagram-button img {
         width: 38px;
         height: 38px;
-    }
-
-    .project-navigation {
-        grid-template-columns: 1fr;
     }
 
     .photo-feature-info h3 {
@@ -1279,7 +1272,6 @@ footer span {
         margin-top: 25px;
     }
 }
-
 /* =========================================
    YEARBOOK DESIGN
 ========================================= */
@@ -1315,39 +1307,33 @@ footer span {
 
 /* YEARBOOK GALLERY */
 
-.yearbook-gallery {
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-start;
+.project-page .yearbook-gallery {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 2fr);
+    align-items: start;
     gap: 20px;
     width: 100%;
     margin-top: 30px;
     padding-bottom: 15px;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    overscroll-behavior-x: contain;
 }
 
-.yearbook-item {
-    flex: 0 0 auto;
+.project-page .yearbook-item {
     min-width: 0;
     margin: 0;
 }
 
-.yearbook-image {
-    display: flex;
-    align-items: flex-start;
-    height: 300px;
+.project-page .yearbook-image {
+    width: 100%;
+    height: auto;
     background: transparent;
     border: none;
 }
 
-.yearbook-image img {
+.project-page .yearbook-image img {
     display: block;
-    width: auto;
-    height: 100%;
-    max-width: none;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
     object-fit: contain;
     background: transparent;
     border: none;
@@ -1355,18 +1341,18 @@ footer span {
     box-shadow: none;
 }
 
-.yearbook-item figcaption {
+.project-page .yearbook-item figcaption {
     display: flex;
     flex-direction: column;
     gap: 5px;
     margin-top: 12px;
 }
 
-.yearbook-item figcaption strong {
+.project-page .yearbook-item figcaption strong {
     font-weight: 600;
 }
 
-.yearbook-item figcaption span {
+.project-page .yearbook-item figcaption span {
     font-size: 0.8rem;
     opacity: 0.7;
 }
@@ -1375,7 +1361,7 @@ footer span {
    PROJECTS PAGE ONLY
 ========================================= */
 
-/* THREE PROJECT BUTTONS IN ONE ROW */
+/* THREE PROJECT BUTTONS SIDE BY SIDE */
 
 .project-page .project-navigation {
     display: grid;
@@ -1407,29 +1393,28 @@ footer span {
     max-width: none;
 }
 
-/* INVESTMENT PRESENTATION BESIDE HEADING */
+/* INVESTMENT PRESENTATION BESIDE ITS HEADING */
 
-#magna-pitch .presentation-section {
+.project-page #magna-pitch .presentation-entry {
     display: grid;
     grid-template-columns: 220px minmax(0, 1fr);
     align-items: start;
     gap: 35px;
-    margin: 45px 0 65px;
 }
 
-#magna-pitch .presentation-section h3 {
+.project-page #magna-pitch .presentation-entry h3 {
     margin: 0;
     font-size: 28px;
 }
 
-#magna-pitch .presentation-container {
+.project-page #magna-pitch .presentation-container {
     width: 100%;
     height: 750px;
     background: var(--paper);
     border: 1px solid var(--line);
 }
 
-#magna-pitch .presentation-frame {
+.project-page #magna-pitch .presentation-frame {
     display: block;
     width: 100%;
     height: 100%;
@@ -1458,16 +1443,12 @@ footer span {
 
 @media (max-width: 750px) {
 
-    .yearbook-image {
-        height: 220px;
-    }
-
-    #magna-pitch .presentation-section {
+    .project-page #magna-pitch .presentation-entry {
         grid-template-columns: 1fr;
         gap: 15px;
     }
 
-    #magna-pitch .presentation-container {
+    .project-page #magna-pitch .presentation-container {
         height: 600px;
     }
 }
@@ -1482,13 +1463,5 @@ footer span {
     .project-page .project-nav-button {
         min-height: 110px;
         padding: 12px;
-    }
-
-    .media-page .project-navigation {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .media-page .project-nav-button {
-        padding: 18px;
     }
 }
