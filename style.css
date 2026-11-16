@@ -1280,8 +1280,9 @@ footer span {
     }
 }
 
-
-/* YEARBOOK DESIGN */
+/* =========================================
+   YEARBOOK DESIGN
+========================================= */
 
 .yearbook-project {
     margin-top: 65px;
@@ -1295,79 +1296,30 @@ footer span {
 }
 
 .yearbook-eyebrow {
+    margin-bottom: 12px;
     font-size: 0.75rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    margin-bottom: 12px;
 }
 
-.yearbook-intro h2 {
-    margin-bottom: 15px;
-}
+.yearbook-intro h2 { margin-bottom: 15px; }
 
 .yearbook-intro > p:last-child {
-    line-height: 1.7;
     max-width: 650px;
+    line-height: 1.7;
 }
 
-.yearbook-gallery {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-    align-items: start;
-}
-
-.yearbook-item {
-    margin: 0;
-    min-width: 0;
-}
-
-.yearbook-item img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border: 1px solid rgba(20, 35, 55, 0.15);
-    transition: transform 0.25s ease;
-}
-
-.yearbook-item img:hover {
-    transform: translateY(-4px);
-}
-
-.yearbook-item figcaption {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-top: 12px;
-}
-
-.yearbook-item figcaption strong {
-    font-weight: 600;
-}
-
-.yearbook-item figcaption span {
-    font-size: 0.8rem;
-    opacity: 0.7;
-}
-
-@media (max-width: 700px) {
-    .yearbook-gallery {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-}
-
-/* YEARBOOK DESIGN GALLERY */
+/* HORIZONTAL GALLERY */
 
 .yearbook-gallery {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
     width: 100%;
+    margin-top: 30px;
+    padding-bottom: 15px;
     overflow-x: auto;
     overflow-y: hidden;
-    padding-bottom: 15px;
-    margin-top: 30px;
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     overscroll-behavior-x: contain;
@@ -1380,20 +1332,17 @@ footer span {
 }
 
 .yearbook-image {
-    height: 300px;
-    width: auto;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: visible;
+    align-items: flex-start;
+    height: 300px;
     background: transparent;
     border: none;
 }
 
 .yearbook-image img {
     display: block;
-    height: 100%;
     width: auto;
+    height: 100%;
     max-width: none;
     object-fit: contain;
 }
@@ -1405,17 +1354,15 @@ footer span {
     margin-top: 12px;
 }
 
-.yearbook-item figcaption strong {
-    font-weight: 600;
-}
+.yearbook-item figcaption strong { font-weight: 600; }
 
 .yearbook-item figcaption span {
     font-size: 0.8rem;
     opacity: 0.7;
 }
 
+/* RESPONSIVE */
+
 @media (max-width: 700px) {
-    .yearbook-image {
-        height: 220px;
-    }
+    .yearbook-image { height: 220px; }
 }
