@@ -1384,10 +1384,10 @@ footer span {
     width: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: rgba(20, 35, 55, 0.04);
-    border: 1px solid rgba(20, 35, 55, 0.15);
+    justify-content: flex-start;
+    overflow: visible;
+    background: transparent;
+    border: none;
 }
 
 .yearbook-image img {
