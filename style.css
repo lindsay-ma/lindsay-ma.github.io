@@ -1366,16 +1366,14 @@ footer span {
    PROJECTS PAGE ADJUSTMENTS
 ========================================= */
 
-/* THREE NAVIGATION BUTTONS */
+/* PROJECTS PAGE ONLY */
 
-.project-navigation {
-    display: grid;
+.project-page .project-navigation {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 15px;
-    width: 100%;
 }
 
-.project-nav-button {
+.project-page .project-nav-button {
     min-width: 0;
 }
 
