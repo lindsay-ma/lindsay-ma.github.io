@@ -1475,3 +1475,10 @@ footer span {
 .project-page #yearbook .entry {
     border-top: none;
 }
+/* THREE SUBSTACK ARTICLES IN ONE ROW */
+.writing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    width: 100%;
+}
